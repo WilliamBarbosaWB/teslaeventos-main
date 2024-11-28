@@ -13,13 +13,14 @@ button {
   background-color: #e1049b;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 15px 100px;
+  padding: 10px 40px;
   font-size: 18px;
   margin-top: 20px;
+  box-shadow: 16px 15px 20px -8px rgba(0, 0, 0, 0.33);
 }
 
 button:hover {
@@ -70,15 +71,15 @@ video {
 }
 
 .titulo-principal {
-  font-size: 54px;
+  font-size: 38px;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.2;
   padding-bottom: 10px;
   color: rgb(30, 29, 29);
 }
 
 .texto-complementar {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -101,11 +102,11 @@ video {
 }
 
 .destaque img {
-  width: 90%;
+  width: 100%;
 }
 
 ul li {
-  font-size: 16px;
+  font-size: 20px;
   text-decoration: none;
   margin-left: 40px;
 }
@@ -160,20 +161,13 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .coluna-texto p {
   margin-bottom: 15px;
   font-size: 18px;
   line-height: 1.4;
-}
-
-.coluna-imagem {
-  flex: 1; /* Imagem ocupa menos espaço */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .coluna-imagem img {
@@ -186,22 +180,21 @@ ul li {
 .top-bar {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 5%;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 20px;
 }
 
 .btn-top {
   color: #b8047f;
-  border: none;
   border-radius: 5px;
-  text-transform: uppercase;
   font-weight: 600;
   padding: 10px 20px;
   font-size: 14px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  border: 1px solid #b8047f;
+  border: 1px solid #e1049b;
 }
 
 .btn-top:hover {
@@ -252,8 +245,8 @@ ul li {
   height: 100%;
   background: radial-gradient(
     ellipse at bottom center,
-    rgba(175, 175, 172, 0.177),
-    rgba(255, 255, 255, 0)
+    rgba(226, 64, 207, 0.147),
+    rgba(255, 255, 255, 0.031)
   );
   transform-origin: bottom center;
   animation: moveLight 3s infinite alternate ease-in-out;
@@ -262,7 +255,7 @@ ul li {
 }
 
 .spotlight.left {
-  left: 10%;
+  left: 40%;
   transform: rotate(360deg);
   animation-delay: 0.8s;
 }
@@ -285,11 +278,30 @@ ul li {
   }
 }
 
-/* Média query para telas com largura máxima de 768px (tablets e celulares) */
+.btn-whats a img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.top-bar .icones {
+  width: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+/* Média query para telas com largura máxima de 1024px (tablets e celulares) */
 @media only screen and (max-width: 1024px) {
   .caixa-mae {
     flex-direction: column;
-    padding: 20px;
+    padding: 40px;
     gap: 20px;
     margin-left: 0;
   }
@@ -343,7 +355,7 @@ ul li {
   }
 }
 
-/* Média query para telas com largura máxima de 768px (tablets e celulares) */
+/* Média query para telas com largura máxima de 800px (tablets e celulares) */
 @media only screen and (max-width: 800px) {
   .caixa-mae {
     flex-direction: column;
@@ -535,11 +547,12 @@ ul li {
   .top-bar {
     position: static;
     margin-top: 10px;
+    margin-left: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
 
   .logo-tesla {
