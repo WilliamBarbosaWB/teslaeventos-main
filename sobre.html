@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós - Tesla Eventos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="fade-in">
+    <div id="transition-overlay"></div>
+
+    <div class="sobre-container">
+      <h1>Sobre Nós</h1>
+
+      <div class="colunas-sobre">
+        <div class="coluna-texto">
+          <p>
+            <strong>A Tesla Eventos</strong> nasceu de um sonho. Um sonho de
+            transformar dificuldades em oportunidades, de converter dor em
+            solidariedade. <strong>Fundada por Nagib da Costa Cardoso</strong>,
+            que enfrentou a fome e viveu em uma palafita no igarapé do
+            Educandos, a Tesla Eventos é mais do que uma empresa de serviços
+            para eventos – é um símbolo de superação e esperança. Em cada tenda
+            montada, em cada climatizador instalado, a Tesla Eventos carrega a
+            história de um homem que nunca desistiu, mesmo diante das
+            adversidades.
+          </p>
+          <br />
+          <p>
+            Mas a missão da Tesla vai além de oferecer serviços excepcionais
+            para seus clientes. Com o compromisso de fazer a diferença na
+            comunidade, a Tesla Eventos destina 15% de seu lucro para a compra
+            de cestas básicas, que são distribuídas nos bairros da zona leste de
+            Manaus. Cada evento realizado pela Tesla não é apenas uma celebração
+            de momentos especiais, mas também uma oportunidade de estender a mão
+            para aqueles que mais precisam. A cada contrato fechado, a Tesla
+            Eventos contribui para alimentar famílias e levar um pouco de alívio
+            e dignidade a quem enfrenta dificuldades.
+          </p>
+          <br />
+          <p>
+            Esta lembrança de gratidão e alegria é o que inspira a Tesla Eventos
+            a continuar ajudando o próximo. Na Tesla Eventos, acreditamos que
+            juntos podemos construir um futuro melhor. Junte-se a nós nesta
+            jornada de solidariedade e transformação. Para mais informações,
+            visite teslaeventos.com.br ou entre em contato pelo e-mail
+            contato@teslaeventos.com.br. Como diz o fundador da Tesla: "Sem
+            ajudar o próximo, a vida não tem o menor sentido."
+          </p>
+          <button
+            onclick="window.location.href='index.html'"
+            class="btn-voltar"
+          >
+            Voltar para Home
+          </button>
+        </div>
+
+        <div class="coluna-imagem">
+          <img src="./assets/logo.png" alt="Logo Tesla Eventos" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const overlay = document.getElementById("transition-overlay");
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          overlay.classList.remove("active");
+        }, 100); // Tempo para remover a animação ao carregar
+      });
+    </script>
+  </body>
+</html>
