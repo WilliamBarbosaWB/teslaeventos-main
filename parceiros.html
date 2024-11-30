@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços Prestados - Tesla Eventos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="fade-in">
+    <div id="transition-overlay"></div>
+
+    <div class="sobre-container">
+      <div class="logo-tesla">
+        <a href="./index.html"><img src="./assets/LOGO-TESLA.png" alt="" /></a>
+      </div>
+
+      <h1>Empresas que já confiaram na Tesla Eventos</h1>
+
+      <div class="colunas-sobre"></div>
+
+      <div class="carrosel">
+        <img src="./assets/logos/YAMAHA-CIRCLE.png" alt="" />
+        <img src="./assets/logos/HUAWEI-CIRCLE.png" alt="" />
+        <img src="./assets/logos/NORTETECH-CIRCLE.png" alt="" />
+        <img src="./assets/logos/BRAGAMOTORS-CIRCLE.png" alt="" />
+        <img src="./assets/logos/BRAGAVEICULOS-CIRCLE.png" alt="" />
+        <img src="./assets/logos/FABRICAEVENTOS-CIRCLE.png" alt="" />
+        <img src="./assets/logos/DUNORTE-CIRCLE.png" alt="" />ß
+        <img src="./assets/logos/VELOSOAGRO-CIRCLE.png" alt="" />
+        <img src="./assets/logos/VELOSONEET-CIRCLE.png" alt="" />
+        <img src="./assets/logos/COLEGIOMILITAR-CIRCLE.png" alt="" />
+        <img src="./assets/logos/CONEXXUS-CIRCLE.png" alt="" />
+        <img src="./assets/logos/DESTAK-CIRCLE.png" alt="" />
+        <img src="./assets/logos/GUSTA+-CIRCLE.png" alt="" />
+        <img src="./assets/logos/ARQUIDIOCESE-CIRCLE.png" alt="" />
+        <img src="./assets/logos/SINDICATO-CIRCLE.png" alt="" />
+        <img src="./assets/logos/UENDEL-PINHEIRO---CIRCLE.png" alt="" />
+        <img src="./assets/logos/AXERITO-CIRCLE.png" alt="" />
+        <img src="./assets/logos/ADVAM-CIRCLE.png" alt="advam" />
+      </div>
+
+      <button onclick="window.location.href='index.html'" class="btn-voltar">
+        Voltar para Home
+      </button>
+    </div>
+
+    <div class="btn-whats">
+      <a href="https://wa.me/5592993914237"
+        ><img src="./assets/whatsapp.png" alt=""
+      /></a>
+    </div>
+
+    <script>
+      const overlay = document.getElementById("transition-overlay");
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          overlay.classList.remove("active");
+        }, 100); // Tempo para remover a animação ao carregar
+      });
+    </script>
+  </body>
+</html>

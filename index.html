@@ -21,20 +21,25 @@
     <div class="overlay"></div>
 
     <div class="top-bar">
-      <a href="#" class="btn-top" id="btn-sobre">Sobre</a>
-      <div class="icones">
-        <a href="https://www.instagram.com/teslaeventos_"
-          ><img
-            src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-            alt="logo-instagram"
-            width="35px"
-        /></a>
-        <a href="https://www.facebook.com/profile.php?id=61569206324847"
-          ><img
-            src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
-            alt="logo-facebook"
-            width="35px"
-        /></a>
+      <a href="./sobre.html" class="btn-top" id="btn-sobre">Sobre</a>
+      <a href="./parceiros.html" class="btn-top" id="btn-clientes">Clientes</a>
+      <div class="container-icones">
+        <div class="icones">
+          <a href="https://www.instagram.com/teslaeventos_"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+              alt="logo-instagram"
+              width="35px"
+          /></a>
+        </div>
+        <div class="icones">
+          <a href="https://www.facebook.com/profile.php?id=61569206324847"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+              alt="logo-facebook"
+              width="35px"
+          /></a>
+        </div>
       </div>
     </div>
 
@@ -92,6 +97,7 @@
 
     <script>
       const btnSobre = document.getElementById("btn-sobre");
+      const btnClientes = document.getElementById("btn-clientes");
       const overlay = document.getElementById("transition-overlay");
 
       btnSobre.addEventListener("click", (e) => {
@@ -99,6 +105,13 @@
         overlay.classList.add("active");
         setTimeout(() => {
           window.location.href = "sobre.html";
+        }, 800); // Tempo da animação
+      });
+      btnClientes.addEventListener("click", (e) => {
+        e.preventDefault();
+        overlay.classList.add("active");
+        setTimeout(() => {
+          window.location.href = "parceiros.html";
         }, 800); // Tempo da animação
       });
     </script>
