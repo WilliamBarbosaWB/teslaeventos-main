@@ -100,6 +100,7 @@
       const btnClientes = document.getElementById("btn-clientes");
       const overlay = document.getElementById("transition-overlay");
 
+      // Ativa o overlay e redireciona para Sobre
       btnSobre.addEventListener("click", (e) => {
         e.preventDefault();
         overlay.classList.add("active");
@@ -107,12 +108,19 @@
           window.location.href = "sobre.html";
         }, 800); // Tempo da animação
       });
+
+      // Ativa o overlay e redireciona para Parceiros
       btnClientes.addEventListener("click", (e) => {
         e.preventDefault();
         overlay.classList.add("active");
         setTimeout(() => {
           window.location.href = "parceiros.html";
         }, 800); // Tempo da animação
+      });
+
+      // Remove o overlay ao carregar a página inicial
+      window.addEventListener("load", () => {
+        overlay.classList.remove("active");
       });
     </script>
   </body>

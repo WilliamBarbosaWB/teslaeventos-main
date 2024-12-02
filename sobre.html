@@ -76,11 +76,22 @@
     <script>
       const overlay = document.getElementById("transition-overlay");
 
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          overlay.classList.remove("active");
-        }, 100); // Tempo para remover a animação ao carregar
-      });
+// Remove o overlay ao carregar a página
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    overlay.classList.remove("active");
+  }, 100); // Tempo para remover a animação ao carregar
+});
+
+// Ativa o overlay ao voltar para a página inicial
+document.querySelector(".btn-voltar").addEventListener("click", (e) => {
+  e.preventDefault();
+  overlay.classList.add("active");
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 800); // Tempo da animação
+});
+
     </script>
   </body>
 </html>
