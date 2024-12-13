@@ -23,6 +23,7 @@
     <div class="top-bar">
       <a href="./sobre.html" class="btn-top" id="btn-sobre">Sobre</a>
       <a href="./parceiros.html" class="btn-top" id="btn-clientes">Clientes</a>
+      <a href="#" class="btn-top" id="btn-clientes">Produtos</a>
       <div class="container-icones">
         <div class="icones">
           <a href="https://www.instagram.com/teslaeventos_"
@@ -45,7 +46,9 @@
 
     <div class="caixa-mae">
       <div class="content">
-        <img class="logo-tesla" src="./assets/logo.png" alt="Logo-tesla" />
+        <div class="logo-tesla-principal">
+          <img class="logo-tesla" src="./assets/logo.png" alt="Logo-tesla" />
+        </div>
         <p class="titulo-principal">
           Precisando de equipamentos para o seu Evento?
         </p>
@@ -98,30 +101,30 @@
     <script>
       const btnSobre = document.getElementById("btn-sobre");
       const btnClientes = document.getElementById("btn-clientes");
-      const overlay = document.getElementById("transition-overlay");
 
-      // Ativa o overlay e redireciona para Sobre
-      btnSobre.addEventListener("click", (e) => {
-        e.preventDefault();
-        overlay.classList.add("active");
-        setTimeout(() => {
-          window.location.href = "sobre.html";
-        }, 800); // Tempo da animação
-      });
+      function activateTransitionAndRedirect(button, targetPage) {
+        const overlay = document.getElementById("transition-overlay");
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          overlay.classList.add("active");
+          overlay.addEventListener(
+            "transitionend",
+            () => {
+              window.location.href = targetPage;
+            },
+            { once: true }
+          );
+        });
+      }
 
-      // Ativa o overlay e redireciona para Parceiros
-      btnClientes.addEventListener("click", (e) => {
-        e.preventDefault();
-        overlay.classList.add("active");
-        setTimeout(() => {
-          window.location.href = "parceiros.html";
-        }, 800); // Tempo da animação
-      });
-
-      // Remove o overlay ao carregar a página inicial
+      // Remove o overlay ao carregar
       window.addEventListener("load", () => {
+        const overlay = document.getElementById("transition-overlay");
         overlay.classList.remove("active");
       });
+
+      activateTransitionAndRedirect(btnSobre, "sobre.html");
+      activateTransitionAndRedirect(btnClientes, "parceiros.html");
     </script>
   </body>
 </html>

@@ -74,23 +74,27 @@
 
     
     <script>
-      const overlay = document.getElementById("transition-overlay");
+     const btnVoltar = document.querySelector(".btn-voltar");
 
-// Remove o overlay ao carregar a página
+function activateTransitionAndRedirect(button, targetPage) {
+  const overlay = document.getElementById("transition-overlay");
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    overlay.classList.add("active");
+    overlay.addEventListener("transitionend", () => {
+      window.location.href = targetPage;
+    }, { once: true });
+  });
+}
+
+// Remove o overlay ao carregar
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    overlay.classList.remove("active");
-  }, 100); // Tempo para remover a animação ao carregar
+  const overlay = document.getElementById("transition-overlay");
+  overlay.classList.remove("active");
 });
 
-// Ativa o overlay ao voltar para a página inicial
-document.querySelector(".btn-voltar").addEventListener("click", (e) => {
-  e.preventDefault();
-  overlay.classList.add("active");
-  setTimeout(() => {
-    window.location.href = "index.html";
-  }, 800); // Tempo da animação
-});
+activateTransitionAndRedirect(btnVoltar, "index.html");
+
 
     </script>
   </body>

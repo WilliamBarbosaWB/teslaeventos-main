@@ -25,7 +25,7 @@
         <img src="./assets/logos/BRAGAMOTORS-CIRCLE.png" alt="" />
         <img src="./assets/logos/BRAGAVEICULOS-CIRCLE.png" alt="" />
         <img src="./assets/logos/FABRICAEVENTOS-CIRCLE.png" alt="" />
-        <img src="./assets/logos/DUNORTE-CIRCLE.png" alt="" />ß
+        <img src="./assets/logos/DUNORTE-CIRCLE.png" alt="" />
         <img src="./assets/logos/VELOSOAGRO-CIRCLE.png" alt="" />
         <img src="./assets/logos/VELOSONEET-CIRCLE.png" alt="" />
         <img src="./assets/logos/COLEGIOMILITAR-CIRCLE.png" alt="" />
@@ -51,13 +51,30 @@
     </div>
 
     <script>
-      const overlay = document.getElementById("transition-overlay");
+      const btnVoltar = document.querySelector(".btn-voltar");
 
+      function activateTransitionAndRedirect(button, targetPage) {
+        const overlay = document.getElementById("transition-overlay");
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          overlay.classList.add("active");
+          overlay.addEventListener(
+            "transitionend",
+            () => {
+              window.location.href = targetPage;
+            },
+            { once: true }
+          );
+        });
+      }
+
+      // Remove o overlay ao carregar
       window.addEventListener("load", () => {
-        setTimeout(() => {
-          overlay.classList.remove("active");
-        }, 100); // Tempo para remover a animação ao carregar
+        const overlay = document.getElementById("transition-overlay");
+        overlay.classList.remove("active");
       });
+
+      activateTransitionAndRedirect(btnVoltar, "index.html");
     </script>
   </body>
 </html>
