@@ -36,7 +36,7 @@ button:hover {
 
 body {
   height: 100%;
-  background-image: url("./assets/concert\ goers.jpg"); /* Caminho da imagem */
+  background-image: url(./assets/FUNDO-SITE-TESLA-DESKTOP.jpg); /* Caminho da imagem */
   background-size: cover; /* Faz a imagem preencher toda a área */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Não repete a imagem */
@@ -137,7 +137,9 @@ ul li {
   display: flex;
   gap: 20px; /* Espaço entre texto e imagem */
   width: 100%;
-  max-width: 1200px; /* Largura máxima do conteúdo */
+  max-width: 1000px; /* Largura máxima do conteúdo */
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-voltar {
@@ -179,7 +181,7 @@ ul li {
 /*estilização do botão para página sobre*/
 .top-bar {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 5%;
   display: flex;
   align-items: center;
@@ -371,6 +373,11 @@ ul li {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
 }
 
+.h1-parceiros {
+  font-size: 32px;
+  text-align: center;
+}
+
 /* Média query para telas com largura máxima de 1024px (tablets e celulares) */
 @media only screen and (max-width: 1024px) {
   .caixa-mae {
@@ -497,8 +504,24 @@ ul li {
   }
 
   .content {
-    width: 45%;
+    width: 100%;
     text-align: left;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .content .img-logo {
+    margin-top: 77px;
   }
 
   .titulo-principal {
@@ -518,7 +541,7 @@ ul li {
   }
 
   .logo-tesla {
-    height: 80px; /* Ajusta altura do logo */
+    /* Ajusta altura do logo */
     margin-bottom: 10px;
   }
 
@@ -555,6 +578,7 @@ ul li {
   .colunas-sobre {
     flex-direction: column; /* Empilha texto e imagem */
     align-items: center; /* Centraliza */
+    justify-content: center;
   }
 
   .coluna-imagem {
@@ -575,8 +599,17 @@ ul li {
     height: 100vh;
   }
 
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .caixa-mae {
-    padding: 10px;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
   }
 
   .titulo-principal {
@@ -615,19 +648,26 @@ ul li {
   }
 
   .top-bar {
-    margin-top: 20px;
-    margin-bottom: 1000px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     margin-left: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
   }
 
-  .logo-tesla {
-    display: block;
-    margin-bottom: 30px;
+  .img-logo .logo-tesla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -45px;
+    margin-bottom: 10px;
+  }
+
+  .container-icones {
+    display: flex;
   }
 
   .logo-tesla-principal {
@@ -669,8 +709,11 @@ ul li {
   }
 
   .h1-produtos {
+    font-size: 36px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 25px;
   }
 
   .itens {
@@ -690,5 +733,24 @@ ul li {
   .btn-whats {
     width: 50px; /* Reduz o tamanho do botão do WhatsApp */
     height: 50px;
+  }
+
+  .colunas-sobre {
+    display: grid;
+    grid-template-rows: 4fr;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-tesla-produtos {
+    max-width: 300px;
+    padding-top: 25px;
+  }
+
+  .logo-tesla-sobre {
+    max-width: 500px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
